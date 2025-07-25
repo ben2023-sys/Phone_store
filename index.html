@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Phone Store</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Welcome to the Phone Store</h1>
+    <ul>
+        {% for phone in phones %}
+            <li><strong>{{ phone[1] }}</strong>: ${{ phone[2] }}<br>{{ phone[3] }}</li>
+        {% endfor %}
+    </ul>
+    <a href="/admin">Admin Page</a>
+</body>
+</html>
